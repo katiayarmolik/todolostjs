@@ -1,0 +1,20 @@
+{
+  "todos": [
+    {
+      "id": "2",
+      "text": "Practice REST API",
+      "completed": true,
+      "status": "in-progress"
+    },
+    {
+      "id": "a7cd",
+      "text": "Learn JS",
+      "completed": false
+    },
+    {
+      "id": "2026",
+      "text": "find",
+      "completed": false
+    }
+  ]
+}

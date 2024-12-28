@@ -1,0 +1,151 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin: 10px 5px;
+    width: 200px;
+    transition: border-color 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#todoList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+#todoList li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideIn 0.4s forwards;
+}
+
+#todoList li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+#todoList li button {
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px 8px;
+    transition: background-color 0.3s ease;
+}
+
+#todoList li button:hover {
+    background-color: #c82333;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#searchInput {
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+.status-select {
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.todo-status {
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 6px 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.status-pending {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.status-in-progress {
+    background-color: #5bc0de;
+    color: white;
+}
+
+.status-completed {
+    background-color: #28a745;
+    color: white;
+}
+
+.todo-status:hover {
+    transform: scale(1.1);
+}
